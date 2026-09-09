@@ -10,11 +10,16 @@ import java.util.Collection;
  */
 public class ChessPiece {
 
+    private ChessPiece.PieceType piece;
+    private ChessGame.TeamColor color;
+
     public ChessPiece(ChessGame.TeamColor pieceColor, ChessPiece.PieceType type) {
+        this.piece = type;
+        this.color = pieceColor;
     }
 
     /**
-     * The various different chess piece options
+     * The various differenhessGame.TeamCot chess piece options
      */
     public enum PieceType {
         KING,
@@ -29,14 +34,15 @@ public class ChessPiece {
      * @return Which team this chess piece belongs to
      */
     public ChessGame.TeamColor getTeamColor() {
-        throw new RuntimeException("Not implemented");
+        return this.color;
     }
 
     /**
      * @return which type of chess piece this piece is
      */
     public PieceType getPieceType() {
-        throw new RuntimeException("Not implemented");
+
+        return this.piece;
     }
 
     /**
@@ -47,6 +53,8 @@ public class ChessPiece {
      * @return Collection of valid moves
      */
     public Collection<ChessMove> pieceMoves(ChessBoard board, ChessPosition myPosition) {
-        throw new RuntimeException("Not implemented");
+        String[] legalMoves = {"move1", "move2"};
+
+        return null;
     }
 }
